@@ -69,6 +69,7 @@ public class Solution {
         return bits;
     }
     */
+    /* Verion 1
     public int hammingWeight(int n) {
         int count = 0;
         for (int i = 0; i < 32; i++) {
@@ -80,5 +81,17 @@ public class Solution {
         }
         return count;
     }
+     */
+
+    public int hammingWeight(int n) {
+        int count = 0;
+        while ( n != 0 ) {
+            n &= n - 1;
+            count++;
+        }
+        return count;
+    }
+
+
 }
 //leetcode submit region end(Prohibit modification and deletion)
